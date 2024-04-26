@@ -1,71 +1,87 @@
-.Collapse {
-    width: 80%;
-    align-items: center;
-}
+.container {
+  width: 100%;
+  margin-top: 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-.collapse-container {
-    width: 100%;
-    margin-top: 30px;
-    text-align: left;
-    box-sizing: border-box;
-
-  }
-  
-.collapse-button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    width: 100%;
-    padding: 10px 20px;
-    text-align: left;
-    border: none;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    cursor: pointer;
-    height: 50px;
+  .accordion__section {
+    width: 85%;
     background-color: #ff6060;
-    color: white;
-    font-weight: 700;
-    font-size: 24px;
-    font-family: "Montserrat", sans-serif;
-}
-
-.rounded {
     border-radius: 5px;
-}
-  
-.rounded-top {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
-  
-.arrow {
-    width: 20px;
-    height: 20px;
-    transition: transform 0.3s ease;
+  }
+  // height: 52px;
+  // overflow: hidden;
+
+  .accordion {
+    background-color: #ff6060;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 25px;
+    height: 52px;
+
+    &__title {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 24px;
+      color: white;
+    }
+
+    &__icon {
+      margin-left: auto;
+      transition: transform 0.6s ease;
+    }
+
+    &__content {
+      background-color: #f6f6f6;
+      border-radius: 0 0 5px 5px;
+      overflow: hidden;
+      transition: max-height 0.6s ease;
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 18px;
+      padding: 18px;
+      color: #ff6060;
+    }
+  }
 }
 
-  
-.up {
-    transform: rotate(180deg);
+.rotate {
+  transform: rotate(-180deg);
 }
-  
-.down {
-    transform: rotate(0deg);
-}
-  
-.collapse-content {
-    padding: 10px 20px;
-    background-color: #ff6060;
-    width: 100;
-    border: none;
-    border-radius: 0px 0px 5px 5px;
-    color: white;
-    border-top: #ff6060;
-}
-  
-.rounded-bottom {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+
+@media (max-width: 850px) {
+  .container {
+    margin-top: 20px;
+
+    .accordion__section {
+      width: 100%;
+
+      .accordion {
+        height: 30px;
+        padding: 0px 10px;
+
+        &__title {
+          font-size: 13px;
+        }
+
+        &__icon {
+          width: 17px;
+          height: 17px;
+        }
+
+        &__text {
+          font-size: 13px;
+        }
+      }
+    }
   }
+}

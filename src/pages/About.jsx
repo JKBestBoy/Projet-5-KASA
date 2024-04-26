@@ -4,6 +4,7 @@ import Footer from '../components/Footer.jsx';
 import Collapse from '../components/Collapse.jsx';
 import paysage from "../assets/paysage.png";
 import Banner from "../components/Banner.jsx";
+import { aboutList } from '../database/CollapseInfo.js'; // Import des données
 import './About.scss'
 
 export default function About() {
@@ -13,7 +14,15 @@ export default function About() {
       <div className="about"> {/* Ajoutez cette classe */}
       <Banner img={paysage} alt="image d'un paysage de montagne" />
       </div>
-      <Collapse />
+      <div className="collapses">
+        {aboutList.map((item, index) => (
+          <Collapse
+            key={index}
+            title={item.title}
+            description={item.content}
+          />
+        ))}
+      </div>
       <Footer />
     </Fragment>
   );

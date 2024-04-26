@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import prevArrow from '../assets/prevArrow.svg';  // Import de la flèche précédente
-import nextArrow from '../assets/nextArrow.svg';  // Import de la flèche suivante
+import prevArrow from '../assets/prevArrow.svg';
+import nextArrow from '../assets/nextArrow.svg';
 import './Slideshow.scss';
 
 const Slideshow = ({ images }) => {
@@ -16,17 +16,28 @@ const Slideshow = ({ images }) => {
 
   return (
     <div className="slideshow">
-      <button onClick={prevSlide} className="arrow left-arrow">
+      {/* Affiche les flèches uniquement s'il y a plus d'une image */}
+      {images.length > 1 && (
+        <button onClick={prevSlide} className="arrow left-arrow">
           <img src={prevArrow} alt="Flèche précédente" />
         </button>
+      )}
+      
       {images.map((image, index) => (
         <div className={index === current ? 'slide active' : 'slide'} key={index}>
-          {index === current && <img src={image} alt={`Slide ${index}`} className="images"/>}
+          {index === current && <img src={image} alt={`Slide ${index}`} className="images" />}
         </div>
       ))}
-      <button onClick={nextSlide} className="arrow right-arrow">
+
+      {images.length > 1 && (
+        <button onClick={nextSlide} className="arrow right-arrow">
           <img src={nextArrow} alt="Flèche suivante" />
         </button>
+      )}
+      
+      <div className="slide-indicator">
+        {`${current + 1} / ${images.length}`} {/* Affiche le numéro de la photo actuelle et le total */}
+      </div>
     </div>
   );
 };

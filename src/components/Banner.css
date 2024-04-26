@@ -26,7 +26,6 @@
   font-size: 48px;
   width: 100%;
   text-align: center;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Ajoute une ombre noire avec demi-transparence */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
   border: 1px;
 }
-
