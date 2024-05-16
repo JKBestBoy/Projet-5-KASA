@@ -1,12 +1,12 @@
 import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-import Header from '../components/Header.jsx';
-import Footer from '../components/Footer.jsx';
-import Slideshow from '../components/Slideshow.jsx';
-import logements from '../database/logements.json';
-import Collapse from '../components/Collapse.jsx';
-import starActive from '../assets/star-active.png';
-import starInactive from '../assets/star-inactive.png';
+import Header from '../../components/Header/Header.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
+import Slideshow from '../../components/Slideshow/Slideshow.jsx';
+import logements from '../../database/logements.json';
+import Collapse from '../../components/Collapse/Collapse.jsx';
+import starActive from '../../assets/star-active.png';
+import starInactive from '../../assets/star-inactive.png';
 import './Housing.scss';
 
 export default function Housing() {
@@ -65,7 +65,7 @@ export default function Housing() {
                 />
                 <Collapse
                     title="Équipements"
-                    description={logement.equipments.join(', ')} // Pour les équipements, utilisez une chaîne de caractères
+                    description={logement.equipments.join(', ')}
                 />
           </div>
         </div>

@@ -1,9 +1,10 @@
 import { Fragment } from "react";
-import Header from '../components/Header.jsx';
-import Footer from '../components/Footer.jsx';
-import Banner from '../components/Banner.jsx';
-import Cards from '../components/Cards.jsx';
+import Header from '../components/Header/Header.jsx';
 import falaise from '../assets/falaise.png';
+import Banner from '../components/Banner/Banner.jsx';
+import Cards from '../components/Cards/Cards.jsx';
+import Footer from '../components/Footer/Footer.jsx';
+
 
 
 export default function Home() {

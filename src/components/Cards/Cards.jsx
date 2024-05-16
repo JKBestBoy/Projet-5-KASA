@@ -1,5 +1,5 @@
 import "./Cards.scss";
-import logements from "../database/logements.json";
+import logements from '../../database/logements.json';
 import { Link } from 'react-router-dom';
 
 export default function Cards() {

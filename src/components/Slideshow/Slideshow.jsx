@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import prevArrow from '../assets/prevArrow.svg';
-import nextArrow from '../assets/nextArrow.svg';
+import prevArrow from '../../assets/prevArrow.svg';
+import nextArrow from '../../assets/nextArrow.svg';
 import './Slideshow.scss';
 
 const Slideshow = ({ images }) => {
