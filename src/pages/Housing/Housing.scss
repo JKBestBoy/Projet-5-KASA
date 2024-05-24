@@ -3,7 +3,8 @@ $color_2: black;
 $color_3: white;
 $background-color_1: #ff6060;
 .Housing_main .header {
-    margin-left: 65px;
+    margin-left: 5%;
+	margin-right: 5%;
 }
 .Housing_main {
 	display: flex;
@@ -80,6 +81,7 @@ $background-color_1: #ff6060;
 	display: flex;
 	flex-direction: row;
 	width: 100%;
+	gap: 70px;
 }
 
 @media screen and (max-width: 950px) {
@@ -89,6 +91,9 @@ $background-color_1: #ff6060;
 		margin: 0%;
 		font-weight: 500;
 		margin-top: 20px;
+	}
+	.Housing_main .header {
+		align-items: center;
 	}
 
   }
@@ -100,7 +105,13 @@ $background-color_1: #ff6060;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	gap: 10px;
 	}
+	.Housing_main .slideshow .slide-indicator {
+		display: none;
+		
+	}
+
 	.left_right {
 		display: flex;
 		justify-content: space-between;
@@ -119,6 +130,4 @@ $background-color_1: #ff6060;
 		display: flex;
 		gap: 10px;
 	}
-
-
 }

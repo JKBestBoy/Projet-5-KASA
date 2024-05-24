@@ -4,6 +4,9 @@ import Home from './pages/Home.jsx';
 import About from './pages/About/About';
 import Error from './pages/Error/Error';
 import Housing from './pages/Housing/Housing.jsx';
+import Footer from './components/Footer/Footer'; // Assuming you have this component
+import './styles/App.scss';
+
 
 function App() {
   return (
