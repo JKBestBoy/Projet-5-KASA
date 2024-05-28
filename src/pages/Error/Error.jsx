@@ -9,10 +9,10 @@ export default function Erreur() {
       <Fragment>
         <Header />
         <main className='main'>
-        <h1>404</h1>
-        <h2>Oups! La page que vous demandez n'existe pas.</h2>
+        <h1 className='Error_h1'>404</h1>
+        <h2 className='Error_h2'>Oups! La page que vous demandez n'existe pas.</h2>
         <Link to="/"  className='link'>
-            <p>Retourner à la page d'accueil</p>
+            <p className='Error_p'>Retourner à la page d'accueil</p>
         </Link>
         </main>
         <Footer />
